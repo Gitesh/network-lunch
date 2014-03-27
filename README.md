@@ -1,4 +1,4 @@
 network-lunch
 =============
 
-lunch roulette
+A front-end for lunch roulette
