@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>jQuery UI Datepicker - Default functionality</title>
+<!--
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  
+ -->
+ 
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.timepickr.js"></script>
+  
+
+<style>
+.ui-timepickr {
+    position:absolute;
+    width:480px; 
+}
+
+.ui-timepickr-row {
+    margin:0;
+    padding:0;
+    margin-top:2px; 
+    display:none;
+    position:relative;
+}
+
+.ui-timepickr-button {
+    float:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+    list-style-type:none;
+}
+
+.ui-timepickr-button span {
+    font-size:.7em;
+    padding:4px 6px 4px 6px;
+    margin-left:2px;
+    text-align:center;
+    cursor:pointer;
+    display:block;
+    text-align:center;
+
+
+    /* system theme (default) */
+    border-width:1px;
+    border-style:solid;
+    /*border-color:ThreeDLightShadow ThreeDShadow ThreeDShadow ThreeDLightShadow;
+    color:ButtonText;
+    background:ButtonFace;*/
+}
+
+.ui-timepickr-button span.ui-state-hover {
+    /*color:HighlightText;
+    background:Highlight;*/
+}
+
+.ui-state-hover span {
+    /*background:#c30;*/
+}
+  
+</style>
+
+	<script>
+  
+  
+	  $(function() {
+
+	  		$( "#datepicker" ).datepicker({dateFormat: 'DD, d MM, yy'}).val();
+
+		//$( "#datepicker" ).datepicker({dateFormat: 'mm-yy'.val()});
+	  
+		
+		$('#timepicker').timepickr({
+			handle: '#trigger-test',
+			convention: 12 });
+
+			
+		//$("#test").click( function(){ alert("test"); });	
+		
+				
+		$(function() { $( document ).tooltip();	}); //tooltip
+  
+  
+		
+	  });
+	    
+	  
+	  
+	  
+	  
+	  
+	</script>
+
+  
+</head>
+
+  
+<body>
+
+<h1> Network Lunch </h1>
+
+<h2> <p> Expand your network, encourage the cross fertilisation of ideas, learn something new, meet interesting people. </p>
+ <p> This new networking tool will randomly pair you for lunch. Just enter your email, pick a date that you're free and we'll look for a match. </p> 
+ <p> Someone, somewhere is having lunch right now... <p> 
+</h2>
+
+<h3> 1. Enter Your details </h3>
+
+		<p>email: <input type="text" id="email" title="We need your email so we can contact you when we find a match" ></p>
+		
+		<p>mobile: <input type="text" id="mobile" title="Is your lunch partner running late? or have you been stood up? Enter your number so that you can be contacted." ></p>
+
+
+<hr>
+
+<h3> 2. When are you free? </h3> 
+
+		<p>
+			Date: <input type="text" id="datepicker">
+				
+			Time: <input type="text" id="timepicker">
+		</p>
+
+<hr>
+
+<h3> 3. Where are you willing to meet? </h3> 
+		
+		<p>Venue: 
+		
+		<select class="element select medium" id="element_4" name="element_4"> 
+			<option value="" selected="selected"></option>
+			<option value="1">4LW Canteen</option>
+			<option value="2">5TS Canteen</option>
+			<option value="3">Bedfont Lakes</option>
+			<option value="4">Sunbury</option>
+		</select>
+
+		</p>
+ 
+
+ 
+  
+ <script>
+ 
+ var strEmail = $('#email').value;
+ 
+ 
+ alert(strEmail);
+ 
+ 
+ </script>
+ 
+ 
+ 
+
+</body>
+
+</html>
